@@ -19,6 +19,8 @@ class CreateCongresosTable extends Migration
             $table->integer('year');
             $table->date('fecha_inicio');
             $table->date('fecha_final');
+            $table->string('pais');
+            $table->string('lugar');
             $table->timestamps();
         });
     }
