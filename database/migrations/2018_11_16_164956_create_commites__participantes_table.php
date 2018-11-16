@@ -15,6 +15,8 @@ class CreateCommitesParticipantesTable extends Migration
     {
         Schema::create('commites__participantes', function (Blueprint $table) {
             $table->increments('id');
+            $table->unsignedInteger('id_participante');
+            $table->foreign('id_participante')->references('id')->on('participantes');
             $table->timestamps();
         });
     }

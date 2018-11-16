@@ -15,6 +15,12 @@ class CreateConferencistasTable extends Migration
     {
         Schema::create('conferencistas', function (Blueprint $table) {
             $table->increments('id');
+            $table->unsignedInteger('id_participante');
+            $table->foreign('id_participante')->references('id')->on('participantes');
+            $table->string('titulo_keynote');
+            $table->string('resumen');
+            $table->string('biografia');
+            $table->string('foto');
             $table->timestamps();
         });
     }

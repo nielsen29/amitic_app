@@ -15,6 +15,10 @@ class CreateCommitesTable extends Migration
     {
         Schema::create('commites', function (Blueprint $table) {
             $table->increments('id');
+            $table->unsignedInteger('id_congreso');
+            $table->foreign('id_congreso')->references('id')->on('congresos');
+            $table->string('nombre');
+            $table->string('descripcion');
             $table->timestamps();
         });
     }
