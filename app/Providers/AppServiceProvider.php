@@ -16,7 +16,7 @@ class AppServiceProvider extends ServiceProvider
     {
         //
 
-        Schema::defaultStringLength(250);
+        Schema::defaultStringLength(191);
     }
 
     /**
