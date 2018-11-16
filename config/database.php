@@ -50,10 +50,11 @@ return [
             'unix_socket' => env('DB_SOCKET', ''),
             'charset' => 'utf8',
             'collation' => 'utf8_unicode_ci',
+            'engine' => 'InnoDB ROW_FORMAT=DYNAMIC',
             'prefix' => '',
             'prefix_indexes' => true,
             'strict' => true,
-            'engine' => null,
+            //'engine' => null,
         ],
 
         'pgsql' => [
