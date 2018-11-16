@@ -25,6 +25,8 @@ class CreateParticipantesTable extends Migration
             $table->unsignedInteger('id_tipo_participante');
             $table->foreign('id_tipo_participante')->references('id')->on('tipos__participantes');
             $table->timestamps();
+
+
         });
     }
 
