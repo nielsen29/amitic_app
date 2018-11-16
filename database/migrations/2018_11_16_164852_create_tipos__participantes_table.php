@@ -19,7 +19,7 @@ class CreateTiposParticipantesTable extends Migration
             $table->foreign('id_congreso')->references('id')->on('congresos');
             $table->string('nombre');
             $table->string('descripcion');
-            $table->double('costo');
+            $table->double('costo',8,2);
             $table->timestamps();
         });
     }
