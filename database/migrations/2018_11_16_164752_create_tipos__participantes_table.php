@@ -14,7 +14,7 @@ class CreateTiposParticipantesTable extends Migration
     public function up()
     {
       Schema::defaultStringLength(250);
-        Schema::create('tipos__participantes', function (Blueprint $table) {
+        Schema::create('tipos_participantes', function (Blueprint $table) {
             $table->increments('id');
             $table->unsignedInteger('id_congreso');
             $table->foreign('id_congreso')->references('id')->on('congresos');
@@ -32,6 +32,6 @@ class CreateTiposParticipantesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('tipos__participantes');
+        Schema::dropIfExists('tipos_participantes');
     }
 }

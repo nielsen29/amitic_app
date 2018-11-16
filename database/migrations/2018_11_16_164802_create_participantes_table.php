@@ -20,11 +20,11 @@ class CreateParticipantesTable extends Migration
             $table->foreign('id_congreso')->references('id')->on('congresos');
             $table->string('nombre');
             $table->string('apellido');
-            $table->string('id_personal')->unique()->nullable(false);
+            $table->string('id_personal', 20)->unique();
             $table->string('institucion');
-            $table->string('email')->unique()->nullable(false);
+            $table->string('email',100)->unique();
             $table->unsignedInteger('id_tipo_participante');
-            $table->foreign('id_tipo_participante')->references('id')->on('tipos__participantes');
+            $table->foreign('id_tipo_participante')->references('id')->on('tipos_participantes');
             $table->timestamps();
 
 
