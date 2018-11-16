@@ -13,6 +13,7 @@ class CreateCommitesParticipantesTable extends Migration
      */
     public function up()
     {
+      Schema::defaultStringLength(250);
         Schema::create('commites__participantes', function (Blueprint $table) {
             $table->increments('id');
             $table->unsignedInteger('id_participante');

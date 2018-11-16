@@ -13,6 +13,7 @@ class CreateConferencistasTable extends Migration
      */
     public function up()
     {
+      Schema::defaultStringLength(250);
         Schema::create('conferencistas', function (Blueprint $table) {
             $table->increments('id');
             $table->unsignedInteger('id_participante');
