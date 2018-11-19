@@ -16,7 +16,14 @@ use App\Topicos;
 
 
 Route::get('/', function () {
-    $d = Topicos::all();
-    dd($d);
+
     return view('welcome');
+});
+
+Route::prefix('admin')->group(function (){
+
+    Route::get('/', function (){
+        echo "mierdaaaaa";
+    });
+
 });
