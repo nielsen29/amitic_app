@@ -17,7 +17,7 @@ class CreateTiposParticipantesTable extends Migration
         Schema::create('tipos_participantes', function (Blueprint $table) {
             $table->increments('id');
             $table->unsignedInteger('id_congreso');
-            $table->foreign('id_congreso')->references('id')->on('congresos');
+            $table->foreign('id_congreso')->references('id')->on('congresos')->onDelete('cascade');
             $table->string('nombre');
             $table->string('descripcion');
             $table->double('costo',8,2);

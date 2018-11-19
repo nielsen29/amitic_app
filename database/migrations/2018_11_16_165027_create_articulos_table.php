@@ -17,7 +17,7 @@ class CreateArticulosTable extends Migration
         Schema::create('articulos', function (Blueprint $table) {
             $table->increments('id');
             $table->unsignedInteger('id_participante');
-            $table->foreign('id_participante')->references('id')->on('participantes');
+            $table->foreign('id_participante')->references('id')->on('participantes')->onDelete('cascade');
             $table->string('titulo');
             $table->string('resumen');
             $table->string('tmp_archivo');

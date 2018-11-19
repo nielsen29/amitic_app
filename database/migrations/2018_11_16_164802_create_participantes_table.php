@@ -17,14 +17,14 @@ class CreateParticipantesTable extends Migration
         Schema::create('participantes', function (Blueprint $table) {
             $table->increments('id');
             $table->unsignedInteger('id_congreso');
-            $table->foreign('id_congreso')->references('id')->on('congresos');
+            $table->foreign('id_congreso')->references('id')->on('congresos')->onDelete('cascade');
             $table->string('nombre');
             $table->string('apellido');
             $table->string('id_personal', 20)->unique();
             $table->string('institucion');
             $table->string('email',100)->unique();
             $table->unsignedInteger('id_tipo_participante');
-            $table->foreign('id_tipo_participante')->references('id')->on('tipos_participantes');
+            $table->foreign('id_tipo_participante')->references('id')->on('tipos_participantes')->onDelete('cascade');
             $table->timestamps();
 
 

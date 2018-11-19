@@ -17,7 +17,7 @@ class CreateTopicosTable extends Migration
         Schema::create('topicos', function (Blueprint $table) {
             $table->increments('id');
             $table->unsignedInteger('id_congreso');
-            $table->foreign('id_congreso')->references('id')->on('congresos');
+            $table->foreign('id_congreso')->references('id')->on('congresos')->onDelete('cascade');
             $table->string('nombre');
             $table->string('descripcion');
             $table->timestamps();

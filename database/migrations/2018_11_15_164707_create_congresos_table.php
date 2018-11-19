@@ -13,7 +13,6 @@ class CreateCongresosTable extends Migration
      */
     public function up()
     {
-      Schema::defaultStringLength(250);
         Schema::create('congresos', function (Blueprint $table) {
             $table->increments('id');
             $table->string('nombre');

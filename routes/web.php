@@ -16,14 +16,36 @@ use App\Topicos;
 
 
 Route::get('/', function () {
-
     return view('welcome');
 });
 
-Route::prefix('admin')->group(function (){
 
-    Route::get('/', function (){
-        echo "mierdaaaaa";
+Route::middleware('auth','role:admin')->group(function (){
+
+    Route::get('/',function (){
+        return view('welcome');
+    });
+});
+
+
+Route::middleware('auth','role:participante')->group(function (){
+
+    Route::get('/lol',function (){
+        dd('MIERDA');
+    });
+});
+
+Route::middleware('guest')->group(function (){
+
+    Route::get('/',function () {
+        return view('welcome');
     });
 
+
+
 });
+
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
