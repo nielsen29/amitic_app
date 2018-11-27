@@ -53,7 +53,6 @@ class RouteServiceProvider extends ServiceProvider
     {
         Route::middleware('web')
              ->namespace($this->namespace)
-            //->domain('192.168.0.7:8888')
              ->group(base_path('routes/web.php'));
     }
 
