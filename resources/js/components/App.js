@@ -14,21 +14,26 @@ import axios from 'axios'
 class App extends Component {
 
 
-
     render(){
+        const appURL = this.his
         return (
-            <BrowserRouter>
-
-                <div>
-                    <MenuAppBar/>
+            <div>
+                <MenuAppBar/>
+                <BrowserRouter>
                     <Switch>
-                        <Route exact path='/' component={Index}/>
-                        <Route exact path='/login' component={SignIn}/>
+                        <Route exact path={appURL + '/'} render={() => <div className="container alert-warning"><h1>esto es el path</h1></div>}/>
+                        <Route exact path={appURL + '/login'} component={SignIn}/>
+                        <Route exact={} path={appURL + '/user'} render={()=>{
+
+                            <div>
+
+                            </div>
+
+                        }}/>
                     </Switch>
 
-                </div>
-
-            </BrowserRouter>
+                </BrowserRouter>
+            </div>
 
         )
     }

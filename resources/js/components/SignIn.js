@@ -1,7 +1,7 @@
 /**
  * Created by amihealthmel on 11/20/18.
  */
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import Avatar from '@material-ui/core/Avatar';
 import Button from '@material-ui/core/Button';
