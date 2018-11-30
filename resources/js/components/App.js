@@ -15,24 +15,10 @@ class App extends Component {
 
 
     render(){
-        const appURL = this.his
+        const appURL = '/amitic_app';
         return (
             <div>
-                <MenuAppBar/>
-                <BrowserRouter>
-                    <Switch>
-                        <Route exact path={appURL + '/'} render={() => <div className="container alert-warning"><h1>esto es el path</h1></div>}/>
-                        <Route exact path={appURL + '/login'} component={SignIn}/>
-                        <Route exact={} path={appURL + '/user'} render={()=>{
-
-                            <div>
-
-                            </div>
-
-                        }}/>
-                    </Switch>
-
-                </BrowserRouter>
+                <SignIn/>
             </div>
 
         )

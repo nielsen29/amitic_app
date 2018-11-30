@@ -2,10 +2,14 @@
 
 namespace App\Http\Controllers;
 
+use App\Congreso;
 use Illuminate\Http\Request;
 
 class CongresoController extends Controller
 {
+
+
+
     /**
      * Display a listing of the resource.
      *
@@ -14,6 +18,8 @@ class CongresoController extends Controller
     public function index()
     {
         //
+        $congresos = Congreso::all();
+        return $congresos;
     }
 
     /**
@@ -35,6 +41,10 @@ class CongresoController extends Controller
     public function store(Request $request)
     {
         //
+
+        $congreso = new Congreso();
+        $congreso->nombre = $request->input('nombre');
+        //$congreso->
     }
 
     /**

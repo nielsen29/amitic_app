@@ -16,6 +16,7 @@ import Paper from '@material-ui/core/Paper';
 import Typography from '@material-ui/core/Typography';
 import withStyles from '@material-ui/core/styles/withStyles';
 
+
 import axios from 'axios';
 import {Link} from 'react-router-dom';
 
@@ -110,7 +111,7 @@ render() {
                 <Typography component="h1" variant="h5">
                     Sign in
                 </Typography>
-                <form className={classes.form} method="post" onSubmit={this.onSubmit.bind(this)}>
+                <form className={classes.form} method="post" action="login">
                     <FormControl margin="normal" required fullWidth>
                         <InputLabel htmlFor="email">Email Address</InputLabel>
                         <Input id="email" name="email" ref="email" autoComplete="email" autoFocus
@@ -136,7 +137,7 @@ render() {
                         color="primary"
                         className={classes.submit}
                     >
-                        Sign in
+                        INGRESAR
                     </Button>
                 </form>
             </Paper>

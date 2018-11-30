@@ -1,9 +1,9 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="container">
+<div class="container-fluid">
     <div class="row justify-content-center">
-        <div class="col-md-8">
+        <div class="col-md">
             <div class="card">
                 <div class="card-header">Dashboard</div>
 
@@ -17,9 +17,26 @@
 
                     You are logged in!
                         {{ Auth::user()->name }}
+
+
+
+
                 </div>
             </div>
         </div>
     </div>
+
+    @if(Auth::user()->hasRole('admin'))
+
+
+        @include('auth.admin')
+
+
+    @else
+
+
+
+
+    @endif
 </div>
 @endsection

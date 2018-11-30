@@ -13,27 +13,22 @@
 
 use App\Topicos;
 
-/*
-
 Route::get('/', function () {
     return view('welcome');
 });
 
-
 Route::middleware('auth','role:admin')->group(function (){
 
-    Route::get('/home',function (){
+    Route::resource('congresos', 'CongresoController');
 
-        return view('welcome');
-    });
 });
-
 
 Route::middleware('auth','role:participante')->group(function (){
 
     Route::get('/home',function (){
 
     });
+
 });
 
 Route::middleware('guest')->group(function (){
@@ -42,21 +37,18 @@ Route::middleware('guest')->group(function (){
         return view('welcome');
     });
 
-
-
 });
 
 
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
-*/
 /*
 Route::get('/{slug}',function (){
     return view('app');
 })->where('slug','(?!api)([A-z\d-\/_.]+)?');
 */
 
-Route::view('/{path?}','app');
+//Route::view('/{path?}','app');
 
-Auth::routes();
+//Auth::routes();
