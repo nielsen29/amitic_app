@@ -35,5 +35,6 @@ class CreateCongresosTable extends Migration
     public function down()
     {
         Schema::dropIfExists('congresos');
+
     }
 }
