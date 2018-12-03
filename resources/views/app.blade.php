@@ -14,10 +14,12 @@
 </head>
 <body>
 
+<div class="container">
+    <div id="topicos">
 
-<div id="app">
-
+    </div>
 </div>
+
 <script src="{{ asset('js/app.js') }}"></script>
 </body>
 </html>

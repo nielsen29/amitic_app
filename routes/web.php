@@ -62,6 +62,6 @@ Route::view('/{path?}','app');
 Auth::routes();*/
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('app');
 });
 
