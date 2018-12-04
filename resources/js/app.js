@@ -15,3 +15,4 @@ require('./bootstrap');
 
 //require('./components/App');
 require('./components/Congresos');
+require('./components/Congresos/NewCongreso');

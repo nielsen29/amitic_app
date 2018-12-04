@@ -18,6 +18,16 @@
                     </div>
             </div>
     </div>
+            <div class="row justify-content-center">
+                    <div class="col-md">
+                            <div class="card">
+                                    <div class="card-header"><h5>Congresos</h5></div>
+                            </div>
+                            <div class="">
+                                    <div id="new-congreso"></div>
+                            </div>
+                    </div>
+            </div>
 </div>
 
 

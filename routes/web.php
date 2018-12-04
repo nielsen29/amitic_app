@@ -12,6 +12,9 @@
 */
 
 use App\Topicos;
+use App\Congreso;
+use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Schema;
 
 Route::get('/', function () {
     return view('welcome');
@@ -52,3 +55,10 @@ Route::get('/{slug}',function (){
 //Route::view('/{path?}','app');
 
 //Auth::routes();
+
+
+Route::get('/test', function (){
+   $d = new Topicos();
+
+   dd($d->relationships());
+});
