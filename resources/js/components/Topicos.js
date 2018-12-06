@@ -2,9 +2,7 @@ import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 
 import TopicosItem from './TopicosItem'
-import List from '@material-ui/core/List';
 
-import PropTypes from 'prop-types';
 import Paper from '@material-ui/core/Paper';
 import Typography from '@material-ui/core/Typography';
 
@@ -27,7 +25,7 @@ export default class Topicos extends Component {
     }
 
     componentDidMount(){
-        axios.get('http://127.0.0.1:8000/api/topicos')
+        axios.get('api/topicos')
             .then(response => {
                 this.setState({ topicos: response.data });
             })
@@ -40,10 +38,6 @@ export default class Topicos extends Component {
 
         return(
             <Paper elevation={1}>
-                <Typography variant="h5" component="h3">
-                    Topicos:
-                </Typography>
-
 
                     <GridList cellHeight={'auto'} style={{
                         display: 'flex',
@@ -52,16 +46,20 @@ export default class Topicos extends Component {
                         overflow: 'hidden',
                         backgroundColor: 'white', }}>
 
+                        <GridListTile key="Subheader" cols={2} style={{ height: 'auto' }}>
+                            <ListSubheader component="div">
+                                <Typography variant="h5" component="h3">
+                                    Topicos:
+                                </Typography>
+                            </ListSubheader>
+                        </GridListTile>
+
                         {this.state.topicos.map(topico => (
                             <GridListTile key={topico.id}>
                                 <TopicosItem topicos={topico}/>
                             </GridListTile>
                         ))}
                     </GridList>
-
-
-
-
             </Paper>
         );
     }
