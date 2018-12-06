@@ -6,7 +6,6 @@ import TopicosItem from './TopicosItem'
 import Paper from '@material-ui/core/Paper';
 import Typography from '@material-ui/core/Typography';
 
-
 import GridList from '@material-ui/core/GridList';
 import GridListTile from '@material-ui/core/GridListTile';
 import ListSubheader from '@material-ui/core/ListSubheader';
@@ -68,7 +67,6 @@ export default class Topicos extends Component {
         return (
             <div>
                 {this.renderTopicos()}
-
             </div>
         )
     }

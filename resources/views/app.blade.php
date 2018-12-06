@@ -15,9 +15,8 @@
 <body>
 
 <div class="container">
-    <div id="topicos">
-
-    </div>
+    <div id="portada"></div>
+    <div id="topicos"></div>
 </div>
 
 <script src="{{ asset('js/app.js') }}"></script>

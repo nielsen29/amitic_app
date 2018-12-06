@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Congreso;
 
 class CongresoController extends Controller
 {
@@ -43,9 +44,11 @@ class CongresoController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show($year)
     {
-        //
+        //Se presentan los datos del congreso especificado
+        $congreso = Congreso::where('year',$year)->first();
+        return $congreso;
     }
 
     /**
