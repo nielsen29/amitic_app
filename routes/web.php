@@ -21,8 +21,11 @@ Route::get('/', function () {
 });
 
 Route::middleware('auth','role:admin')->group(function (){
-
     Route::resource('congresos', 'CongresoController');
+    Route::get('/getForm', function (){
+       $d = new Topicos();
+       return $d->getCampos();
+    });
 
 });
 
@@ -32,6 +35,7 @@ Route::middleware('auth','role:participante')->group(function (){
 
     });
 
+
 });
 
 Route::middleware('guest')->group(function (){
@@ -39,6 +43,7 @@ Route::middleware('guest')->group(function (){
     Route::get('/',function () {
         return view('welcome');
     });
+
 
 });
 
@@ -58,7 +63,7 @@ Route::get('/{slug}',function (){
 
 
 Route::get('/test', function (){
-   $d = new Topicos();
+   $d = new Congreso();
 
-   dd($d->relationships());
+   dd($d->getCampos());
 });

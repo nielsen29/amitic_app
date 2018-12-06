@@ -64,19 +64,9 @@ class Congresos extends Component {
         const {classes} = this.props;
 
 
-        console.log(this.props);
+        //console.log(this.props);
 
         return (
-
-
-
-            /*<div>
-
-                <div>
-                    <FloatingActionButtons/>
-                </div>
-
-            </div>*/
 
             <div style={{height:'400px'}}>
                 <div >

@@ -11,22 +11,7 @@ use function PHPSTORM_META\type;
 class Congreso extends Model
 {
     //
-use HasRelationships, RalationShipsTrait;
-  function getCampos(){
-
-     $columnas = Schema::getColumnListing($this->getTable());
-     $data = array();
-
-
-     foreach ($columnas as $columna){
-        //$type = $columna->getType();
-        $data = array_add($data, $columna, DB::getSchemaBuilder()->getColumnType($this->getTable(),$columna));
-     }
-
-
-     return $data;
-
-  }
+use RalationShipsTrait, FormTrait;
 
   function topicos(){
      return $this->hasMany('App\Topicos', 'id_congreso','id');

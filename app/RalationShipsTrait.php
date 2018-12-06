@@ -40,9 +40,7 @@ trait RalationShipsTrait {
          try{
 
             $return = $method->invoke($model);
-
-            $arr = $return;
-
+            //dd($return);
             if($return instanceof Relation){
                //dd($arr);
                $relationships[$method->getName()] = [

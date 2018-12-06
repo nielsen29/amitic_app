@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Congreso;
+use App\Http\Requests\StoreCongresos;
 use Illuminate\Http\Request;
 
 class CongresoController extends Controller
@@ -38,12 +39,21 @@ class CongresoController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(StoreCongresos $request)
     {
         //
 
+       dd($request);
+
+       $F = Congreso::create($request->input());
+       return $F->toJson();
+
+        /*
         $congreso = new Congreso();
         $congreso->nombre = $request->input('nombre');
+        $congreso->year = $request->input('year');
+        $congreso->
+        */
         //$congreso->
     }
 

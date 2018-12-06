@@ -7,4 +7,6 @@ use Illuminate\Database\Eloquent\Model;
 class Conferencistas extends Model
 {
     //
+   use FormTrait;
+
 }
