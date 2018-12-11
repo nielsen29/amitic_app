@@ -87359,7 +87359,7 @@ var NewCongreso = function (_React$Component) {
                     null,
                     __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                         'form',
-                        { method: 'post', action: 'congresos' },
+                        { onSubmit: this.handleSubmit },
                         data.map(function (item) {
                             var key = item.item.id + '-div';
                             return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_23__ui_adds_Inputs__["a" /* default */], {

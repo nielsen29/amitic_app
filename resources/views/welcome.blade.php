@@ -3,6 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="csrf-token" content="{{ csrf_token() }}">
 
         <title>AmiTIC</title>
 
@@ -86,6 +87,18 @@
             <div class="content">
                 <div class="title m-b-md">
                     AmITIC
+                </div>
+    
+                <div class="py-4">
+        
+                    <form method="POST" action="{{url('lol')}}">
+                        @csrf
+                        <input type="textarea" id="perro" name="gato[0]">
+                        <input type="checkbox" id="perro" name="gato[1]">
+                        <input type="text" id="perro" name="perro">
+                        <button>Guardar</button>
+                    </form>
+    
                 </div>
 
                 <div class="links">

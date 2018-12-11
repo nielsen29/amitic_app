@@ -23,7 +23,7 @@ Route::get('/', function () {
 Route::middleware('auth','role:admin')->group(function (){
     Route::resource('congresos', 'CongresoController');
     Route::get('/getForm', function (){
-       $d = new Topicos();
+       $d = new Congreso();
        return $d->getCampos();
     });
 
@@ -38,16 +38,24 @@ Route::middleware('auth','role:participante')->group(function (){
 
 });
 
-Route::middleware('guest')->group(function (){
+/*Route::middleware('guest')->group(function (){
 
     Route::get('/',function () {
-        return view('welcome');
+        return view('Congreso');
     });
 
+   Route::get('/{year}','CongresoNowController@index');
 
-});
+   Auth::routes();
 
 
+
+
+
+
+});*/
+
+Route::post('/lol','CongresoNowController@lol');
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
