@@ -1,30 +1,30 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 
+
 export default class Portada extends Component {
     constructor(props) {
 
         super(props);
 
         this.state = {
-            portada: [],
+            congreso: congreso,
         }
+        this.renderPortada=this.renderPortada.bind(this);
     }
 
-    componentDidMount(){
-        axios.get('api/congreso/' + this.props )
-            .then(response => {
-                this.setState({ portada: response.data });
-            })
-            .catch(function (error) {
-                console.log(error);
-            })
+    renderPortada(){
+
+        return(
+            <h1>congreso.id</h1>
+        );
     }
 
     render() {
         return (
             <div>
-                {this.renderTopicos()}
+
+                {this.renderPortada()}
             </div>
         )
     }

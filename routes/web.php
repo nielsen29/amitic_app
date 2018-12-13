@@ -61,7 +61,9 @@ Route::view('/{path?}','app');
 
 Auth::routes();*/
 
+
 Route::get('/', function () {
     return view('app');
 });
 
+Route::get('{year}', 'PortadaController');

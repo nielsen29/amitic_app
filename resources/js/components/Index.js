@@ -12,6 +12,7 @@ export default class Index extends Component {
         return (
             <div>
                 <Portada />
+
                 <Topicos />
             </div>
         );
